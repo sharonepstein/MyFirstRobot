@@ -1,4 +1,4 @@
-package frc.robot;
+package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.DriveTrain;
 
@@ -22,12 +22,13 @@ public class MoveDrivetrain extends CommandBase {
 
     @Override
     public void execute() {
-        driveTrain.
+        driveTrain.moveTank(speedLeft.get(),speedRight.get());
+
     }
 
     @Override
     public void end(boolean interrupted) {
-
+        driveTrain.stop();
     }
 
     @Override
